@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <%= render 'layouts/sidebar', user: @user, book: @new_book %>
-
+    <%= render 'layouts/sidebar', user: @user, beer: @new_beer %>
     <div class="col-md-8 offset-md-1">
       <div class=row">
-        <h2 class="my-4"><%= @user.name %>'s books</h2><%= render 'layouts/search' %>
+        <h2 class="my-4"><%= @user.name %>'s beers</h2>
+        <%= render 'layouts/search' %>
       </div>
       <table class="table">
         <thead>
@@ -15,15 +15,15 @@
           </tr>
         </thead>
         <tbody>
-          <% @user.books.each do |book| %>
+          <% @user.beers.each do |beer| %>
             <tr>
               <td>
-                <%= link_to user_path(book.user) do %>
-                  <%= image_tag book.user.get_profile_image(80,80) %>
+                <%= link_to user_path(beer.user) do %>
+                  <%= image_tag beer.user.get_profile_image(80,80) %>
                 <% end %>
               </td>
-              <td><%= link_to book.title, book_path(book) %></td>
-              <td><%= book.body %></td>
+              <td><%= link_to beer.title, beer_path(beer) %></td>
+              <td><%= beer.body %></td>
             </tr>
           <% end %>
         </tbody>

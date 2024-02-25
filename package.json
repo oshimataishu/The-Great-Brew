@@ -1,5 +1,5 @@
 {
-  "name": "bookers2",
+  "name": "beerers2",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-methods": "^7.18.6",

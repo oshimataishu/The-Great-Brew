@@ -1,32 +1,32 @@
 <div class="container">
   <div class="row">
-    <%= render 'layouts/sidebar', user: current_user, book: @new_book %>
+    <%= render 'layouts/sidebar', user: current_user, beer: @new_beer %>
     <div class="col-md-8 offset-md-1">
       <div class="row">
-        <h2 class="my-4">Users</h2><%= render 'layouts/search' %>
+        <h2 class="my-4">Users</h2>
+        <%= render 'layouts/search' %>
       </div>
-
       <div class="row">
-          <div class="card-deck">
-            <% @users.each do |user| %>
-              <div class="card shadow">
-                <%= link_to user_path(user) do %>
-                  <%= image_tag user.get_profile_image(182,182), class:"bd-placeholder-img card-img-top", style:"width: 100%; height: 200px;" %>
-                <% end %>
-                <div class="card-body">
-                  <p class="card-title">
-                    <strong>Name: <%= user.name %></strong>
-                  </p>
-                  <p class="card-text">
-                    Introduction: <%= user.introduction %>
-                  </p>
-                  <div class="ml-auto"><%= render 'layouts/follow_btn', user: user %></div>
-                </div>
+        <div class="card-deck">
+          <% @users.each do |user| %>
+            <div class="card shadow">
+              <%= link_to user_path(user) do %>
+                <%= image_tag user.get_profile_image(182,182), class:"bd-placeholder-img card-img-top", style:"width: 100%; height: 200px;" %>
+              <% end %>
+              <div class="card-body">
+                <p class="card-title">
+                  <strong>Name: <%= user.name %></strong>
+                </p>
+                <p class="card-text">
+                  Introduction: <%= user.introduction %>
+                </p>
+                <div class="ml-auto"><%= render 'layouts/follow_btn', user: user %></div>
               </div>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

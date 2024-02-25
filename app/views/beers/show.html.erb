@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <%= render 'layouts/sidebar', user: @beer.user, beer: @new_beer %>
+    <div class="col-md-8 offset-md-1">
+      <div class="row">
+        <h2 class="my-4">Beer detail</h2>
+ <%= render 'layouts/search' %>
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><%= image_tag @beer.user.get_profile_image(80,80) %><br>
+              <%= link_to @beer.user.name, user_path(@beer.user) %>
+            </td>
+            <td><%= link_to @beer.title, beer_path(@beer) %></td>
+            <td><%= @beer.body %></td>
+            <td class="favorite_btn_partial_<%= @beer.id %>"><%= render 'layouts/favorite_btn', beer: @beer %></td>
+            <% if @beer.user == current_user %>
+              <td><%= link_to "Edit", edit_beer_path(@beer), class:"btn btn-primary" %></td>
+              <td><%= link_to "Destroy", beer_path(@beer), method: :delete, class:"btn btn-danger", "data-confirm" => "Are you sure?" %></td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      <div class="comment_form_partial">
+        <%= render 'layouts/comment_form', comment: @comment, beer: @beer %>
+      </div>
+      <div class="comment_list_partial">
+        <%= render 'layouts/comment_list', comment: @comment, beer: @beer %>
+      </div>
+    </div>
+  </div>
+</div>

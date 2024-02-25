@@ -1,13 +1,13 @@
 class FavoritesController < ApplicationController
   def create
-    @book = Book.find(params[:book_id])
-    @favorite = current_user.favorites.new(book_id: @book.id)
+    @beer = Beer.find(params[:beer_id])
+    @favorite = current_user.favorites.new(beer_id: @beer.id)
     @favorite.save
   end
 
   def destroy
-    @book = Book.find(params[:book_id])
-    @favorite = current_user.favorites.find_by(book_id: @book.id)
+    @beer = Beer.find(params[:beer_id])
+    @favorite = current_user.favorites.find_by(beer_id: @beer.id)
     @favorite.destroy
   end
 

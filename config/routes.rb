@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books, only: [:show, :index, :create, :edit, :update, :destroy] do
+  resources :beers, only: [:show, :index, :create, :edit, :update, :destroy] do
     resource :favorites, only: [:create, :destroy]
-    resources :book_comments, only: [:create, :destroy]
+    resources :beer_comments, only: [:create, :destroy]
   end
 
   get 'search' => 'searches#search'
