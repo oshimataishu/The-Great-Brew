@@ -1,9 +1,9 @@
 <% if beer.favorited_by?(current_user) %>
   <%= link_to beer_favorites_path(beer), method: :delete, remote: true do %>
-    <i class="fas fa-thumbs-up"></i> <%= beer.favorites.count %>
+    <i class="bi bi-heart-fill"></i> <%= beer.favorites.count %>
   <% end %>
 <% else %>
   <%= link_to beer_favorites_path(beer), method: :post, remote: true do %>
-    <i class="far fa-thumbs-up"></i> <%= beer.favorites.count %>
+    <i class="bi bi-heart"></i> <%= beer.favorites.count %>
   <% end %>
 <% end %>

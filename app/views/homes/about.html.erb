@@ -1,4 +1,4 @@
-<div id="my-carousel" class="carousel slide mb-5" data-ride="carousel">
+<div id="my-carousel" class="carousel about-carousel slide mb-5" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#my-carousel" data-slide-to="1"></li>
@@ -6,40 +6,40 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag 'beer.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100" %>
+      <%= image_tag 'beer1.jpg',style:"object-fit: cover; object-position: 50% 75%;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100" %>
       <div class="container">
         <div class="carousel-caption">
           <h1 class="heading-1">BEER FOR MEMORY</h1>
           <p class="caption-1">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
+            お祝い事や宴会など，<br>
+            幸せなひとときをビールと共に。<br>
+            貴方の記憶に残る麦酒を。
           </p>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'beer2.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <%= image_tag 'beer2.jpg',style:"object-fit: cover; object-position: 50% 63%;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="heading-3">BEER FOR ENERGY</h1>
+          <p class="caption-3">
+            ビールが喉を潤せば，<br>
+            貴方に元気が湧いてくる。<br>
+            麦酒は，貴方の明日を頑張る活力に。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'beer3.jpg',style:"object-fit: cover; object-position: 50% 50%;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
       <div class="container">
         <div class="carousel-caption">
           <h1 class="heading-2">BEER FOR RELAXING</h1>
           <p class="caption-2">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'beer3.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1 class="heading-3">BEER FOR MEMORY</h1>
-          <p class="caption-3">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
+            「一日お疲れ様。」<br>
+            頑張った自分を労うビール。<br>
+            麦酒で貴方に安らぎの時間を。
           </p>
         </div>
       </div>
@@ -54,18 +54,21 @@
     </a>
   </div>
 </div>
-<div class="container">
+<div class="container py-5">
   <div class="row mb-4">
-    <div class="card-deck w-100">
+    <div class="card-deck about-card-deck w-100">
       <div class="col-4">
         <div class="card shadow" id="card-size">
           <div class="w-100 h-50">
             <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image"></div>
           </div>
           <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Share your favorites</strong>
-            </p>
+            <h4 class="card-title text-center mb-2">
+              <strong>貴方の知らない麦酒を</strong>
+            </h4>
+            <div class="card-img bottles mx-auto">
+              <%= image_tag 'bottles.jpg', class:"img-fluid" %>
+            </div>
             <p class="card-text mt-1">
               In Beerers, you can share your favorite beers with others.<br>
               You can also explore other user's recommended breweries.<br>
@@ -75,16 +78,18 @@
           </div>
         </div>
       </div>
-
       <div class="col-4">
         <div class="card shadow" id="card-size">
           <div class="w-100 h-50">
             <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image"></div>
           </div>
           <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Share your favorites</strong>
-            </p>
+            <h4 class="card-title text-center mb-2">
+              <strong>麦酒がつくる繋がり</strong>
+            </h4>
+            <div class="card-img cheers mx-auto">
+              <%= image_tag 'cheers.jpg', class:"img-fluid" %>
+            </div>
             <p class="card-text mt-1">
               In Beerers, you can share your favorite beers with others.<br>
               You can also explore other user's recommended breweries.<br>
@@ -94,16 +99,18 @@
           </div>
         </div>
       </div>
-
       <div class="col-4">
         <div class="card shadow" id="card-size">
           <div class="w-100 h-50">
             <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image"></div>
           </div>
           <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Share your favorites</strong>
-            </p>
+            <h4 class="card-title text-center mb-2">
+              <strong>イチオシ麦酒を共有</strong>
+            </h4>
+            <div class="card-img share mx-auto">
+              <%= image_tag 'beer1.jpg', class:"img-fluid" %>
+            </div>
             <p class="card-text mt-1">
               In Beerers, you can share your favorite beers with others.<br>
               You can also explore other user's recommended breweries.<br>
@@ -114,11 +121,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <%= link_to "Log in", new_user_session_path, class:"btn btn-light btn-sm btn-block mb-3"%>
-  </div>
-  <div class="row">
-    <%= link_to "Sign up", new_user_registration_path, class:"btn btn-light btn-sm btn-block mb-5"%>
   </div>
 </div>

@@ -1,27 +1,24 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <%= render 'layouts/sidebar', user: current_user, beer: @new_beer %>
-    <div class="col-md-8 offset-md-1">
-      <div class="row">
-        <h2 class="my-4">Beers</h2>
-        <%= render 'layouts/search' %>
+    <div class="col-md-10 offset-md-1">
+      <div class="row justify-content-center">
+        <h2 class="my-4">BEERS</h2>
       </div>
       <div class="row">
         <div class="card-deck w-100">
           <% @beers.each do |beer| %>
-            <div class="col-4 mb-5">
-              <div class="card shadow h-100">
+            <div class="col-lg-3 col-md-4 mb-5">
+              <div class="card h-100 p-3">
                 <%= link_to beer_path(beer) do %>
-                  <%= image_tag beer.image, class:"bd-placeholder-img card-img-top", style:"object-position: center; object-fit:cover; width: 100%; height: 200px;" %>
+                  <%= image_tag beer.image, class:"p-1 bd-placeholder-img card-img-top", style:"object-position: center; object-fit:cover; width: 100%; height: 200px;" %>
                 <% end %>
                 <div class="card-body">
                   <p class="card-title text-center">
                     <strong><%= beer.title %></strong>
                   </p>
-                  <p class="card-text">
-                    <%= beer.body %>
+                  <p class="favorite_btn_partial_<%= beer.id %>">
+                    <%= render 'layouts/favorite_btn', beer: beer %>
                   </p>
-                  <p class="favorite_btn_partial_<%= beer.id %>"><%= render 'layouts/favorite_btn', beer: beer %></p>
                 </div>
               </div>
             </div>
@@ -33,4 +30,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

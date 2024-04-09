@@ -1,15 +1,229 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+main {
+  background-color: #ebe7e1;
+}
+
+h2 {
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+nav {
+  color: #3b3b3b;
+  background-color: #fff;
+}
+
+nav .nav-link {
+  color: #3b3b3b;
+  text-align: center;
+  font-size: 1.3rem;
+  display: block;
+  width: 10rem;
+  line-height: 1;
+}
+
+nav .nav-link span {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 1rem;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-collapse.show .navbar-nav,
+.navbar-collapse.collapsing .navbar-nav {
+  background-color: #d5cfc6;
+  text-align: center;
+}
+
+.navbar-collapse.show .nav-link,
+.navbar-collapse.collapsing .nav-link {
+  width: auto;
+}
+
+
+
+footer {
+  background-color: #484848;
+  color: #fff;
+}
+
+
+footer img {
+  height: 70px;
+}
+
+footer li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+footer a {
+  color: #fff;
+}
+
+
+/* homes/top.html.erb */
+.top-carousel img {
+  height: 90vh;
+}
+
+section.content:nth-of-type(2n) {
+  background-color: #fff;
+}
+
+section.content {
+  font-family: "Sawarabi Mincho", serif;
+  line-height: 2;
+}
+
+section.content h2 {
+  font-weight: 600;
+}
+
+
+section.content.intro img {
+  height: 55%;
+}
+
+section.content.friends img {
+  height: 65%;
+}
+
+
+/* sign-up, sign-inページ */
+.sign-page{
+  background-image: url("../images/beer.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.sign-page h5 {
+ background-color: #6c757d;
+ border-radius: 5px;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+
+
+/* homes/about.html */
+.about-carousel img {
+  height: 65vh;
+}
+
+.about-carousel .carousel-caption{
+  border-radius: 10px;
+  background-color: rgba(55,55,55, 0.5);
+}
+
+.about-carousel h1 {
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.about-carousel p {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 1.4rem;
+}
+
+.about-card-deck .card-img img {
+  display: block;
+  border-radius: 50%;
+  width: 80%;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+}
+
+
+
+
+
+
+/* Beers/index.html */
+.card {
+  box-shadow: 0px 0px 12px -5px #777777;
+  transition: box-shadow 0.5s ease;
+}
+
+.card img {
+  border-radius: 5px;
+  background-color: #eeeeee;
+  border: 3px groove #FBFBFB;
+}
+
+.card h4 {
+  font-family:'Courier New', Courier, monospace;
+  color: #4d4d43;
+}
+
+
+.card:hover {
+  box-shadow: 0px 0px 24px -5px #777777;
+  border-radius: 0px;
+}
+
+
+
+/* ページネーション */
+
+.pagination .page-num{
+  width: 25px;
+  height: 25px;
+  border: none;
+  text-align: center;
+}
+
+.pagination .current{
+  width: 25px;
+  height: 25px;
+  background-color: #93c9ff;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.pagination .page-btn{
+  width: 25px;
+  height: 25px;
+  border: none;
+  text-align: center;
+}
+
+.pagination .page-btn a{
+  color: #3b3b3b;
+}
+
+.pagination .page-num a{
+  font-size: 15px;
+  color: #696969;
+}
+
+.pagination .current a{
+  color: white;
+}
+
+.pagination .page-num:hover{
+  border:#696969;
+  border-radius: 25px;
+}
+
+
+.pagination .page-btn .current{
+  background: #93c9ff;
+  border-radius: 15px;
+}
+

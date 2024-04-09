@@ -1,4 +1,4 @@
-<div id="my-carousel" class="carousel slide mb-5" data-ride="carousel">
+<div id="my-carousel" class="carousel top-carousel slide mb-5" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#my-carousel" data-slide-to="1"></li>
@@ -6,42 +6,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag 'beer.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100" %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1 class="heading-1">BEER FOR MEMORY</h1>
-          <p class="caption-1">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
-          </p>
-        </div>
+      <%= image_tag 'beer1.jpg',style:"object-fit: cover; object-position: bottom;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100" %>
+      <div class="row carousel-caption">
+        <%# <h1>BEER FOR FUN</h1> %>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'beer2.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1 class="heading-2">BEER FOR RELAXING</h1>
-          <p class="caption-2">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
-          </p>
-        </div>
+      <%= image_tag 'beer2.jpg',style:"object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <div class="row carousel-caption ">
+        <%# <h1>BEER FOR RELAXING</h1> %>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'beer3.jpg',style:"height: 500px; object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
-      <div class="container">
-        <div class="carousel-caption">
-          <h1 class="heading-3">BEER FOR MEMORY</h1>
-          <p class="caption-3">
-            Your relationship with others would be better<br>
-            by sharing your recommended beer.<br>
-            Drinking helps you live a lot more fun.
-          </p>
-        </div>
+      <%= image_tag 'beer3.jpg',style:"object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <div class="row carousel-caption align-items-end justify-content-center">
+        <%# <h1 class="col-10">BEER FOR FUN</h1> %>
       </div>
     </div>
     <a class="carousel-control-prev" href="#my-carousel" role="button" data-slide="prev">
@@ -54,71 +33,77 @@
     </a>
   </div>
 </div>
-<div class="container">
-  <div class="row mb-4">
-    <div class="card-deck w-100">
-      <div class="col-4">
-        <div class="card shadow" id="card-size">
-          <div class="w-100 h-50">
-            <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image-1"></div>
-          </div>
-          <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Share Your Favorites</strong>
-            </p>
-            <p class="card-text mt-1">
-              In Beerers, you can share your favorite beers with others.<br>
-              You can also explore other user's recommended breweries.<br>
-              This website helps you expand your drinking experiences,<br>
-              and be your own beer-library.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-4">
-        <div class="card shadow" id="card-size">
-          <div class="w-100 h-50">
-            <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image-2"></div>
-          </div>
-          <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Make Friend with Beer Funs</strong>
-            </p>
-            <p class="card-text mt-1">
-              In Beerers, you can share your favorite beers with others.<br>
-              You can also explore other user's recommended breweries.<br>
-              This website helps you expand your drinking experiences,<br>
-              and be your own beer-library.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4">
-        <div class="card shadow" id="card-size">
-          <div class="w-100 h-50">
-            <div class="w-50 h-75 mx-auto mt-3 rounded-circle circle-image-3"></div>
-          </div>
-          <div class="card-body">
-            <p class="card-title text-center mb-2">
-              <strong>Discover New Beer</strong>
-            </p>
-            <p class="card-text mt-1">
-              In Beerers, you can share your favorite beers with others.<br>
-              You can also explore other user's recommended breweries.<br>
-              This website helps you expand your drinking experiences,<br>
-              and be your own beer-library.
-            </p>
-          </div>
-        </div>
+<section class="content main-catch">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-8 text-center">
+        <h2 class="mb-5"><strong>THE GREAT BREW</strong>へようこそ</h2>
+        <h3 class="mb-3">あなただけの麦酒コレクション</h3>
+        <p>
+          THE GREAT BREWとは,<br>
+          ビール好きの，ビール好きによる，ビール好きのための，コミュニティです<br>
+          全国のビールファンが投稿した麦酒のなかから，<br>
+          あなたにとってベストなビールを見つけるお手伝いをします。<br>
+          世界各国の醸造所で作られたクラフトビールには，<br>
+          それぞれ異なる苦味・香り・果実感があります。<br>
+          それらをあなた方一人一人が評価することで，<br>
+          ビールの特徴を総合的な数値として算出します。<br>
+          <br>
+          さあ，貴方のイチオシを発信しましょう。
+        </p>
       </div>
     </div>
   </div>
-  <div class="row">
-    <%= link_to "Log in", new_user_session_path, class:"btn btn-light btn-sm btn-block mb-3"%>
+</section>
+
+
+<section class="content intro">
+  <div class="container py-5">
+    <div class="row align-items-center text-center">
+      <div class="col-lg-6 py-5">
+        <%= image_tag 'graph.png', class:"img-fluid" %>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="mb-5">ビールの味を数値で比較</h2>
+        <p>
+          <strong>THE GREAT BREW</strong> では，<br>
+          ビールの味に違いをもたらす５つの指標を用い，<br>
+          麦酒ひとつひとつの味を数値的に比較することができます。<br>
+          <b>「のどごし」「キレ」「コク」「フルーティーさ」「苦味」</b><br>
+          の５つの観点で，貴方なりの感想を投稿しましょう！<br>
+          <br>
+          ユーザーの好みに合った最適なビールをご提示することで，<br>
+          貴方のビールライフをより豊かにします。
+        </p>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <%= link_to "Sign up", new_user_registration_path, class:"btn btn-light btn-sm btn-block mb-5"%>
+</section>
+
+<section class="content friends">
+  <div class="container py-5">
+    <div class="row text-center align-items-center flex-wrap-reverse">
+      <div class="col-lg-8">
+        <h2 class="mb-5">全国のビール好きと繋がろう</h2>
+        <p>
+          <strong>THE GREAT BREW</strong> では，<br>
+          麦酒クランというコミュニティーに参加することができます。<br>
+          クラフトビール好きが集まるグループや，仕事終わりに呑みに行くコミュニティーなどなど，，<br>
+          自分の好きな麦酒クランに参加し，一緒にビールを嗜む麦酒フレンドを見つけましょう！<br>
+          <br>
+          貴方自身もコミュニティーを作成することができ，<br>
+          さらにコミュニティー間でのグループチャットも可能に！<br>
+          イチオシのビールをおすすめし合ったり，飲み会を開催したりなど，<br>
+          それぞれのコミュニティーにあった使い方ができます。
+        </p>
+        <div class="row mt-5 justify-content-center">
+          <%= link_to "会員登録はこちら", new_user_registration_path, class:"btn btn-outline-dark btn-lg mb-5"%>
+        </div>
+      </div>
+      <div class="col-lg-4 py-5">
+        <%= image_tag 'pouring.jpg', class:"img-fluid rounded-circle" %>
+      </div>
+    </div>
   </div>
-</div>
+</section>
