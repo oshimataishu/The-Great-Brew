@@ -1,18 +1,109 @@
-<div class="container">
-  <div class="row">
-    <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
-      <h1>welcome to <strong><i class="fas fa-book"></i> Bookers!!</strong></h1>
-      <p>In <i class="fas fa-book"></i> Bookers,</p>
-      <p>you can share and exchange your opinions, inpressions, and emotions</p>
-      <p>about various books!</p>
-      <div class="btn-wrapper col-10 mx-auto">
-        <div class="row">
-          <%= link_to "Log in", new_user_session_path, class:"btn btn-info btn-sm btn-block mb-3"%>
-        </div>
-        <div class="row">
-          <%= link_to "Sign up", new_user_registration_path, class:"btn btn-success btn-sm btn-block"%>
-        </div>
+<div id="my-carousel" class="carousel top-carousel slide mb-5" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#my-carousel" data-slide-to="1"></li>
+    <li data-target="#my-carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag 'beer1.jpg',style:"object-fit: cover; object-position: bottom;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100" %>
+      <div class="row carousel-caption">
+        <%# <h1>BEER FOR FUN</h1> %>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'beer2.jpg',style:"object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <div class="row carousel-caption ">
+        <%# <h1>BEER FOR RELAXING</h1> %>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'beer3.jpg',style:"object-fit: cover; object-position: center;", class:"bd-placeholder-img bd-placeholder-img-lg d-block w-100"  %>
+      <div class="row carousel-caption align-items-end justify-content-center">
+        <%# <h1 class="col-10">BEER FOR FUN</h1> %>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#my-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#my-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<section class="content main-catch">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-8 text-center">
+        <h2 class="mb-5"><strong>THE GREAT BREW</strong>へようこそ</h2>
+        <h3 class="mb-3">あなただけの麦酒コレクション</h3>
+        <p>
+          THE GREAT BREWとは,<br>
+          ビール好きの，ビール好きによる，ビール好きのための，コミュニティです<br>
+          全国のビールファンが投稿した麦酒のなかから，<br>
+          あなたにとってベストなビールを見つけるお手伝いをします。<br>
+          世界各国の醸造所で作られたクラフトビールには，<br>
+          それぞれ異なる苦味・香り・果実感があります。<br>
+          それらをあなた方一人一人が評価することで，<br>
+          ビールの特徴を総合的な数値として算出します。<br>
+          <br>
+          さあ，貴方のイチオシを発信しましょう。
+        </p>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+
+<section class="content intro">
+  <div class="container py-5">
+    <div class="row align-items-center text-center">
+      <div class="col-lg-6 py-5">
+        <%= image_tag 'graph.png', class:"img-fluid" %>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="mb-5">ビールの味を数値で比較</h2>
+        <p>
+          <strong>THE GREAT BREW</strong> では，<br>
+          ビールの味に違いをもたらす５つの指標を用い，<br>
+          麦酒ひとつひとつの味を数値的に比較することができます。<br>
+          <b>「のどごし」「キレ」「コク」「フルーティーさ」「苦味」</b><br>
+          の５つの観点で，貴方なりの感想を投稿しましょう！<br>
+          <br>
+          ユーザーの好みに合った最適なビールをご提示することで，<br>
+          貴方のビールライフをより豊かにします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content friends">
+  <div class="container py-5">
+    <div class="row text-center align-items-center flex-wrap-reverse">
+      <div class="col-lg-8">
+        <h2 class="mb-5">全国のビール好きと繋がろう</h2>
+        <p>
+          <strong>THE GREAT BREW</strong> では，<br>
+          麦酒クランというコミュニティーに参加することができます。<br>
+          クラフトビール好きが集まるグループや，仕事終わりに呑みに行くコミュニティーなどなど，，<br>
+          自分の好きな麦酒クランに参加し，一緒にビールを嗜む麦酒フレンドを見つけましょう！<br>
+          <br>
+          貴方自身もコミュニティーを作成することができ，<br>
+          さらにコミュニティー間でのグループチャットも可能に！<br>
+          イチオシのビールをおすすめし合ったり，飲み会を開催したりなど，<br>
+          それぞれのコミュニティーにあった使い方ができます。
+        </p>
+        <div class="row mt-5 justify-content-center">
+          <%= link_to "会員登録はこちら", new_user_registration_path, class:"btn btn-outline-dark btn-lg mb-5"%>
+        </div>
+      </div>
+      <div class="col-lg-4 py-5">
+        <%= image_tag 'pouring.jpg', class:"img-fluid rounded-circle" %>
+      </div>
+    </div>
+  </div>
+</section>

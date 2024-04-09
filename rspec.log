@@ -5,7 +5,7 @@ UsersController
 [32m      レスポンスが成功すること[0m
 [32m      @userが正しく設定されていること[0m
 
-Bookモデルのテスト
+Beerモデルのテスト
   バリデーションのテスト
     titleカラム
 [32m      空欄でないこと[0m
@@ -30,7 +30,7 @@ Userモデルのテスト
 [32m      50文字以下であること: 50文字は〇[0m
 [32m      50文字以下であること: 51文字は×[0m
   アソシエーションのテスト
-    Bookモデルとの関係
+    Beerモデルとの関係
 [32m      1:Nとなっている[0m
 
 [STEP1] ユーザログイン前のテスト
@@ -46,13 +46,13 @@ Userモデルのテスト
 [31m      URLが正しい (FAILED - 6)[0m
   ヘッダーのテスト: ログインしていない場合
     表示内容の確認
-[32m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
+[32m      Beerersリンクが表示される: 左上から1番目のリンクが「Beerers」である[0m
 [32m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
 [32m      Aboutリンクが表示される: 左上から3番目のリンクが「About」である[0m
 [32m      Sign upリンクが表示される: 左上から4番目のリンクが「Sign up」である[0m
 [32m      Log inリンクが表示される: 左上から5番目のリンクが「Log in」である[0m
     リンクの内容を確認
-[32m      Bookersを押すと、トップ画面に遷移する[0m
+[32m      Beerersを押すと、トップ画面に遷移する[0m
 [32m      Homeを押すと、トップ画面に遷移する[0m
 [31m      Aboutを押すと、アバウト画面に遷移する (FAILED - 7)[0m
 [32m      Sign upを押すと、新規登録画面に遷移する[0m
@@ -83,10 +83,10 @@ Userモデルのテスト
 [32m      ログインに失敗し、ログイン画面にリダイレクトされる[0m
   ヘッダーのテスト: ログインしている場合
     ヘッダーの表示を確認
-[32m      Bookersリンクが表示される: 左上から1番目のリンクが「Bookers」である[0m
+[32m      Beerersリンクが表示される: 左上から1番目のリンクが「Beerers」である[0m
 [32m      Homeリンクが表示される: 左上から2番目のリンクが「Home」である[0m
 [31m      Usersリンクが表示される: 左上から3番目のリンクが「Users」である (FAILED - 10)[0m
-[31m      Booksリンクが表示される: 左上から4番目のリンクが「Books」である (FAILED - 11)[0m
+[31m      Beersリンクが表示される: 左上から4番目のリンクが「Beers」である (FAILED - 11)[0m
 [31m      Log outリンクが表示される: 左上から5番目のリンクが「Log out」である (FAILED - 12)[0m
   ユーザログアウトのテスト
     ログアウト機能のテスト
@@ -98,7 +98,7 @@ Userモデルのテスト
     リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。
 [31m      Homeを押すと、自分のユーザ詳細画面に遷移する (FAILED - 15)[0m
 [31m      Usersを押すと、ユーザ一覧画面に遷移する (FAILED - 16)[0m
-[31m      Booksを押すと、投稿一覧画面に遷移する (FAILED - 17)[0m
+[31m      Beersを押すと、投稿一覧画面に遷移する (FAILED - 17)[0m
   投稿一覧画面のテスト
     表示内容の確認
 [31m      URLが正しい (FAILED - 18)[0m
@@ -108,19 +108,19 @@ Userモデルのテスト
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 22)[0m
 [31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 23)[0m
-[31m      「New book」と表示される (FAILED - 24)[0m
+[31m      「New beer」と表示される (FAILED - 24)[0m
 [31m      titleフォームが表示される (FAILED - 25)[0m
 [31m      titleフォームに値が入っていない (FAILED - 26)[0m
 [31m      bodyフォームが表示される (FAILED - 27)[0m
 [31m      bodyフォームに値が入っていない (FAILED - 28)[0m
-[31m      Create Bookボタンが表示される (FAILED - 29)[0m
+[31m      Create Beerボタンが表示される (FAILED - 29)[0m
     投稿成功のテスト
 [31m      自分の新しい投稿が正しく保存される (FAILED - 30)[0m
 [31m      リダイレクト先が、保存できた投稿の詳細画面になっている (FAILED - 31)[0m
   自分の投稿詳細画面のテスト
     表示内容の確認
 [31m      URLが正しい (FAILED - 32)[0m
-[31m      「Book detail」と表示される (FAILED - 33)[0m
+[31m      「Beer detail」と表示される (FAILED - 33)[0m
 [31m      ユーザ画像・名前のリンク先が正しい (FAILED - 34)[0m
 [31m      投稿のtitleが表示される (FAILED - 35)[0m
 [31m      投稿のbodyが表示される (FAILED - 36)[0m
@@ -129,12 +129,12 @@ Userモデルのテスト
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 39)[0m
 [31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 40)[0m
-[31m      「New book」と表示される (FAILED - 41)[0m
+[31m      「New beer」と表示される (FAILED - 41)[0m
 [31m      titleフォームが表示される (FAILED - 42)[0m
 [31m      titleフォームに値が入っていない (FAILED - 43)[0m
 [31m      bodyフォームが表示される (FAILED - 44)[0m
 [31m      bodyフォームに値が入っていない (FAILED - 45)[0m
-[31m      Create Bookボタンが表示される (FAILED - 46)[0m
+[31m      Create Beerボタンが表示される (FAILED - 46)[0m
     投稿成功のテスト
 [31m      自分の新しい投稿が正しく保存される (FAILED - 47)[0m
     編集リンクのテスト
@@ -146,10 +146,10 @@ Userモデルのテスト
   自分の投稿編集画面のテスト
     表示の確認
 [31m      URLが正しい (FAILED - 52)[0m
-[31m      「Editing Book」と表示される (FAILED - 53)[0m
+[31m      「Editing Beer」と表示される (FAILED - 53)[0m
 [31m      title編集フォームが表示される (FAILED - 54)[0m
 [31m      body編集フォームが表示される (FAILED - 55)[0m
-[31m      Update Bookボタンが表示される (FAILED - 56)[0m
+[31m      Update Beerボタンが表示される (FAILED - 56)[0m
 [31m      Showリンクが表示される (FAILED - 57)[0m
 [31m      Backリンクが表示される (FAILED - 58)[0m
     編集成功のテスト
@@ -165,12 +165,12 @@ Userモデルのテスト
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 66)[0m
 [31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 67)[0m
-[31m      「New book」と表示される (FAILED - 68)[0m
+[31m      「New beer」と表示される (FAILED - 68)[0m
 [31m      titleフォームが表示される (FAILED - 69)[0m
 [31m      titleフォームに値が入っていない (FAILED - 70)[0m
 [31m      bodyフォームが表示される (FAILED - 71)[0m
 [31m      bodyフォームに値が入っていない (FAILED - 72)[0m
-[31m      Create Bookボタンが表示される (FAILED - 73)[0m
+[31m      Create Beerボタンが表示される (FAILED - 73)[0m
   自分のユーザ詳細画面のテスト
     表示の確認
 [31m      URLが正しい (FAILED - 74)[0m
@@ -181,12 +181,12 @@ Userモデルのテスト
     サイドバーの確認
 [31m      自分の名前と紹介文が表示される (FAILED - 78)[0m
 [31m      自分のユーザ編集画面へのリンクが存在する (FAILED - 79)[0m
-[31m      「New book」と表示される (FAILED - 80)[0m
+[31m      「New beer」と表示される (FAILED - 80)[0m
 [31m      titleフォームが表示される (FAILED - 81)[0m
 [31m      titleフォームに値が入っていない (FAILED - 82)[0m
 [31m      bodyフォームが表示される (FAILED - 83)[0m
 [31m      bodyフォームに値が入っていない (FAILED - 84)[0m
-[31m      Create Bookボタンが表示される (FAILED - 85)[0m
+[31m      Create Beerボタンが表示される (FAILED - 85)[0m
   自分のユーザ情報編集画面のテスト
     表示の確認
 [31m      URLが正しい (FAILED - 86)[0m
@@ -236,7 +236,7 @@ Userモデルのテスト
     他人の投稿詳細画面のテスト
       表示内容の確認
 [31m        URLが正しい (FAILED - 110)[0m
-[31m        「Book detail」と表示される (FAILED - 111)[0m
+[31m        「Beer detail」と表示される (FAILED - 111)[0m
 [31m        ユーザ画像・名前のリンク先が正しい (FAILED - 112)[0m
 [31m        投稿のtitleが表示される (FAILED - 113)[0m
 [31m        投稿のopinionが表示される (FAILED - 114)[0m
@@ -281,7 +281,7 @@ Userモデルのテスト
     ヘッダー: ログインしている場合
 [31m      Homeリンクのアイコンが表示される (FAILED - 135)[0m
 [31m      Usersリンクのアイコンが表示される (FAILED - 136)[0m
-[31m      Booksリンクのアイコンが表示される (FAILED - 137)[0m
+[31m      Beersリンクのアイコンが表示される (FAILED - 137)[0m
 [31m      Log outリンクのアイコンが表示される (FAILED - 138)[0m
     サイドバー
 [31m      ユーザ一覧画面でレンチアイコンが表示される (FAILED - 139)[0m
@@ -379,13 +379,13 @@ Failures:
       [31m  [0m[0m
       [36m# ./spec/system/01_before_login_spec.rb:231:in `block (4 levels) in <main>'[0m
 
-  11) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Booksリンクが表示される: 左上から4番目のリンクが「Books」である
-      [31mFailure/Error: [0m[32mexpect[0m(books_link).to match([35m[1;35m/[0m[35mBooks[1;35m/[0m[35m[0m)[0m
+  11) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Beersリンクが表示される: 左上から4番目のリンクが「Beers」である
+      [31mFailure/Error: [0m[32mexpect[0m(beers_link).to match([35m[1;35m/[0m[35mBeers[1;35m/[0m[35m[0m)[0m
       [31m[0m
-      [31m  expected "Sign up" to match /Books/[0m
+      [31m  expected "Sign up" to match /Beers/[0m
       [31m  Diff:[0m[0m
       [31m  [0m[34m@@ -1 +1 @@[0m
-      [31m  [0m[31m-/Books/[0m
+      [31m  [0m[31m-/Beers/[0m
       [31m  [0m[32m+"Sign up"[0m
       [31m  [0m[0m
       [36m# ./spec/system/01_before_login_spec.rb:235:in `block (4 levels) in <main>'[0m
@@ -433,40 +433,40 @@ Failures:
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:30:in `block (4 levels) in <main>'[0m
 
-  17) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Booksを押すと、投稿一覧画面に遷移する
-      [31mFailure/Error: [0mclick_link books_link[0m
+  17) [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Beersを押すと、投稿一覧画面に遷移する
+      [31mFailure/Error: [0mclick_link beers_link[0m
       [31m[0m
       [31mCapybara::Ambiguous:[0m
       [31m  Ambiguous match, found 2 elements matching visible link "Sign up"[0m
       [36m# ./spec/system/02_after_login_spec.rb:35:in `block (4 levels) in <main>'[0m
 
   18) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 URLが正しい
-      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books[1;31m'[0m[31m[0m[0m
+      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/beers[1;31m'[0m[31m[0m[0m
       [31m[0m
-      [31m  expected: "/books"[0m
+      [31m  expected: "/beers"[0m
       [31m       got: "/users/sign_in"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:48:in `block (4 levels) in <main>'[0m
 
   19) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分と他人の画像のリンク先が正しい
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: user_path(book.user)[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m, [35mhref[0m: user_path(beer.user)[0m
       [31m  expected to find link "" with href "/users/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:51:in `block (4 levels) in <main>'[0m
 
   20) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link book.title, [35mhref[0m: book_path(book)[0m
-      [31m  expected to find link "f5lgz" with href "/books/1" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link beer.title, [35mhref[0m: beer_path(beer)[0m
+      [31m  expected to find link "f5lgz" with href "/beers/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:55:in `block (4 levels) in <main>'[0m
 
   21) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のオピニオンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
-      [31m  expected to find text "3286n6u67ftsl026zdqc" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content beer.body[0m
+      [31m  expected to find text "3286n6u67ftsl026zdqc" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:59:in `block (4 levels) in <main>'[0m
 
   22) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
-      [31m  expected to find text "vuy6jhf8yr" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "vuy6jhf8yr" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:66:in `block (4 levels) in <main>'[0m
 
   23) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
@@ -474,96 +474,96 @@ Failures:
       [31m  expected to find link "" with href "/users/1/edit" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:70:in `block (4 levels) in <main>'[0m
 
-  24) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "New book" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  24) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New beer」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "New beer" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:73:in `block (4 levels) in <main>'[0m
 
   25) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[title]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[title]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:76:in `block (4 levels) in <main>'[0m
 
   26) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:79:in `block (4 levels) in <main>'[0m
 
   27) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[body]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[body]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:82:in `block (4 levels) in <main>'[0m
 
   28) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[body]" that is not disabled[0m
+      [31m  Unable to find field "beer[body]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:85:in `block (4 levels) in <main>'[0m
 
-  29) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find button "Create Book" that is not disabled but there were no matches[0m
+  29) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Beerボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find button "Create Beer" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:88:in `block (4 levels) in <main>'[0m
 
   30) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:94:in `block (4 levels) in <main>'[0m
 
   31) [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:94:in `block (4 levels) in <main>'[0m
 
   32) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 URLが正しい
-      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + book.id.to_s[0m
+      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/beers/[1;31m'[0m[31m[0m + beer.id.to_s[0m
       [31m[0m
-      [31m  expected: "/books/1"[0m
+      [31m  expected: "/beers/1"[0m
       [31m       got: "/users/sign_in"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:115:in `block (4 levels) in <main>'[0m
 
-  33) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBook detail[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "Book detail" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  33) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Beer detail」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBeer detail[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "Beer detail" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:118:in `block (4 levels) in <main>'[0m
 
   34) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link book.user.name, [35mhref[0m: user_path(book.user)[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link beer.user.name, [35mhref[0m: user_path(beer.user)[0m
       [31m  expected to find link "4rrgu25udw" with href "/users/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:121:in `block (4 levels) in <main>'[0m
 
   35) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.title[0m
-      [31m  expected to find text "sei84" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content beer.title[0m
+      [31m  expected to find text "sei84" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:124:in `block (4 levels) in <main>'[0m
 
   36) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のbodyが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
-      [31m  expected to find text "hf74k28jfkxpmvdtphu1" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content beer.body[0m
+      [31m  expected to find text "hf74k28jfkxpmvdtphu1" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:127:in `block (4 levels) in <main>'[0m
 
   37) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の編集リンクが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mEdit[1;31m'[0m[31m[0m, [35mhref[0m: edit_book_path(book)[0m
-      [31m  expected to find link "Edit" with href "/books/1/edit" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mEdit[1;31m'[0m[31m[0m, [35mhref[0m: edit_beer_path(beer)[0m
+      [31m  expected to find link "Edit" with href "/beers/1/edit" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:130:in `block (4 levels) in <main>'[0m
 
   38) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: book_path(book)[0m
-      [31m  expected to find link "Destroy" with href "/books/1" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mDestroy[1;31m'[0m[31m[0m, [35mhref[0m: beer_path(beer)[0m
+      [31m  expected to find link "Destroy" with href "/beers/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:133:in `block (4 levels) in <main>'[0m
 
   39) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
-      [31m  expected to find text "ijcm614us9" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "ijcm614us9" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:139:in `block (4 levels) in <main>'[0m
 
   40) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
@@ -571,45 +571,45 @@ Failures:
       [31m  expected to find link "" with href "/users/1/edit" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:143:in `block (4 levels) in <main>'[0m
 
-  41) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "New book" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  41) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New beer」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "New beer" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:146:in `block (4 levels) in <main>'[0m
 
   42) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[title]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[title]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:149:in `block (4 levels) in <main>'[0m
 
   43) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:152:in `block (4 levels) in <main>'[0m
 
   44) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[body]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[body]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:155:in `block (4 levels) in <main>'[0m
 
   45) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[body]" that is not disabled[0m
+      [31m  Unable to find field "beer[body]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:158:in `block (4 levels) in <main>'[0m
 
-  46) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find button "Create Book" that is not disabled but there were no matches[0m
+  46) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Beerボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find button "Create Beer" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:161:in `block (4 levels) in <main>'[0m
 
   47) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:167:in `block (4 levels) in <main>'[0m
 
   48) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 編集リンクのテスト 編集画面に遷移する
@@ -641,63 +641,63 @@ Failures:
       [36m# ./spec/system/02_after_login_spec.rb:201:in `block (4 levels) in <main>'[0m
 
   52) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 URLが正しい
-      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + book.id.to_s + [31m[1;31m'[0m[31m/edit[1;31m'[0m[31m[0m[0m
+      [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/beers/[1;31m'[0m[31m[0m + beer.id.to_s + [31m[1;31m'[0m[31m/edit[1;31m'[0m[31m[0m[0m
       [31m[0m
-      [31m  expected: "/books/1/edit"[0m
+      [31m  expected: "/beers/1/edit"[0m
       [31m       got: "/users/sign_in"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:219:in `block (4 levels) in <main>'[0m
 
-  53) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mEditing Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "Editing Book" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  53) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Beer」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mEditing Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "Editing Beer" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:222:in `block (4 levels) in <main>'[0m
 
   54) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 title編集フォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: book.title[0m
-      [31m  expected to find field "book[title]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: beer.title[0m
+      [31m  expected to find field "beer[title]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:225:in `block (4 levels) in <main>'[0m
 
   55) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 body編集フォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m, [35mwith[0m: book.body[0m
-      [31m  expected to find field "book[body]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m, [35mwith[0m: beer.body[0m
+      [31m  expected to find field "beer[body]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:228:in `block (4 levels) in <main>'[0m
 
-  56) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Bookボタンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mUpdate Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find button "Update Book" that is not disabled but there were no matches[0m
+  56) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Beerボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mUpdate Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find button "Update Beer" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:231:in `block (4 levels) in <main>'[0m
 
   57) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mShow[1;31m'[0m[31m[0m, [35mhref[0m: book_path(book)[0m
-      [31m  expected to find link "Show" with href "/books/1" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mShow[1;31m'[0m[31m[0m, [35mhref[0m: beer_path(beer)[0m
+      [31m  expected to find link "Show" with href "/beers/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:234:in `block (4 levels) in <main>'[0m
 
   58) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Backリンクが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mBack[1;31m'[0m[31m[0m, [35mhref[0m: books_path[0m
-      [31m  expected to find link "Back" with href "/books" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link [31m[1;31m'[0m[31mBack[1;31m'[0m[31m[0m, [35mhref[0m: beers_path[0m
+      [31m  expected to find link "Back" with href "/beers" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:237:in `block (4 levels) in <main>'[0m
 
   59) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:245:in `block (4 levels) in <main>'[0m
 
   60) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:245:in `block (4 levels) in <main>'[0m
 
   61) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m4[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:245:in `block (4 levels) in <main>'[0m
 
   62) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 URLが正しい
@@ -720,7 +720,7 @@ Failures:
 
   64) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人の名前がそれぞれ表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
-      [31m  expected to find text "bn25pl0078" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "bn25pl0078" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:276:in `block (4 levels) in <main>'[0m
 
   65) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
@@ -730,7 +730,7 @@ Failures:
 
   66) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
-      [31m  expected to find text "kncy174anx" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "kncy174anx" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:287:in `block (4 levels) in <main>'[0m
 
   67) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
@@ -738,38 +738,38 @@ Failures:
       [31m  expected to find link "" with href "/users/1/edit" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:291:in `block (4 levels) in <main>'[0m
 
-  68) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "New book" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  68) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New beer」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "New beer" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:294:in `block (4 levels) in <main>'[0m
 
   69) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[title]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[title]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:297:in `block (4 levels) in <main>'[0m
 
   70) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:300:in `block (4 levels) in <main>'[0m
 
   71) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[body]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[body]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:303:in `block (4 levels) in <main>'[0m
 
   72) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[body]" that is not disabled[0m
+      [31m  Unable to find field "beer[body]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:306:in `block (4 levels) in <main>'[0m
 
-  73) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find button "Create Book" that is not disabled but there were no matches[0m
+  73) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Beerボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find button "Create Beer" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:309:in `block (4 levels) in <main>'[0m
 
   74) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 URLが正しい
@@ -787,18 +787,18 @@ Failures:
       [36m# ./spec/system/02_after_login_spec.rb:324:in `block (4 levels) in <main>'[0m
 
   76) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link book.title, [35mhref[0m: book_path(book)[0m
-      [31m  expected to find link "wwu4z" with href "/books/1" but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link beer.title, [35mhref[0m: beer_path(beer)[0m
+      [31m  expected to find link "wwu4z" with href "/beers/1" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:327:in `block (4 levels) in <main>'[0m
 
   77) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のbodyが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content book.body[0m
-      [31m  expected to find text "bpvza8feckx94crgkeoh" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content beer.body[0m
+      [31m  expected to find text "bpvza8feckx94crgkeoh" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:330:in `block (4 levels) in <main>'[0m
 
   78) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される
       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content user.name[0m
-      [31m  expected to find text "wovxi23hqv" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "wovxi23hqv" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:341:in `block (4 levels) in <main>'[0m
 
   79) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する
@@ -806,38 +806,38 @@ Failures:
       [31m  expected to find link "" with href "/users/1/edit" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:345:in `block (4 levels) in <main>'[0m
 
-  80) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "New book" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  80) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New beer」と表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mNew beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find text "New beer" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/02_after_login_spec.rb:348:in `block (4 levels) in <main>'[0m
 
   81) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[title]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[title]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:351:in `block (4 levels) in <main>'[0m
 
   82) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:354:in `block (4 levels) in <main>'[0m
 
   83) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m[0m
-      [31m  expected to find field "book[body]" that is not disabled but there were no matches[0m
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_field [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m[0m
+      [31m  expected to find field "beer[body]" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:357:in `block (4 levels) in <main>'[0m
 
   84) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
-      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m).text).to be_blank[0m
+      [31mFailure/Error: [0m[32mexpect[0m(find_field([31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m).text).to be_blank[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[body]" that is not disabled[0m
+      [31m  Unable to find field "beer[body]" that is not disabled[0m
       [36m# ./spec/system/02_after_login_spec.rb:360:in `block (4 levels) in <main>'[0m
 
-  85) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される
-      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Book[1;31m'[0m[31m[0m[0m
-      [31m  expected to find button "Create Book" that is not disabled but there were no matches[0m
+  85) [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Beerボタンが表示される
+      [31mFailure/Error: [0m[32mexpect[0m(page).to have_button [31m[1;31m'[0m[31mCreate Beer[1;31m'[0m[31m[0m[0m
+      [31m  expected to find button "Create Beer" that is not disabled but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:363:in `block (4 levels) in <main>'[0m
 
   86) [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 URLが正しい
@@ -892,17 +892,17 @@ Failures:
 
   94) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザ新規登録成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "successfully" in "Bookers\nHome Users Books Log out\nHomes#top\nFind me in app/views/homes/top.html.erb"[0m
+      [31m  expected to find text "successfully" in "Beerers\nHome Users Beers Log out\nHomes#top\nFind me in app/views/homes/top.html.erb"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:19:in `block (3 levels) in <main>'[0m
 
   95) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログイン成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "successfully" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "successfully" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:26:in `block (3 levels) in <main>'[0m
 
   96) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "successfully" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+      [31m  expected to find text "successfully" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:36:in `block (3 levels) in <main>'[0m
 
   97) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザのプロフィール情報更新成功時
@@ -913,17 +913,17 @@ Failures:
       [36m# ./spec/system/03_finishing_touches_spec.rb:44:in `block (3 levels) in <main>'[0m
 
   98) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの新規投稿成功時: 投稿一覧画面から行います。
-      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
+      [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [1;34;4mFaker[0m::[1;34;4mLorem[0m.characters([35mnumber[0m: [1;34m5[0m)[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find field "book[title]" that is not disabled[0m
+      [31m  Unable to find field "beer[title]" that is not disabled[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:53:in `block (3 levels) in <main>'[0m
 
   99) [STEP3] 仕上げのテスト サクセスメッセージのテスト 投稿データの更新成功時
-      [31mFailure/Error: [0mclick_button [31m[1;31m'[0m[31mUpdate Book[1;31m'[0m[31m[0m[0m
+      [31mFailure/Error: [0mclick_button [31m[1;31m'[0m[31mUpdate Beer[1;31m'[0m[31m[0m[0m
       [31m[0m
       [31mCapybara::ElementNotFound:[0m
-      [31m  Unable to find button "Update Book" that is not disabled[0m
+      [31m  Unable to find button "Update Beer" that is not disabled[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:64:in `block (3 levels) in <main>'[0m
 
   100) [STEP3] 仕上げのテスト 処理失敗時のテスト ユーザのプロフィール情報編集失敗: nameを1文字にする 更新されない
@@ -948,86 +948,86 @@ Failures:
        [36m# ./spec/system/03_finishing_touches_spec.rb:106:in `block (4 levels) in <main>'[0m
 
   103) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿が保存されない
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[body]" that is not disabled[0m
+       [31m  Unable to find field "beer[body]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:128:in `block (4 levels) in <main>'[0m
 
   104) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 投稿一覧画面を表示している
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[body]" that is not disabled[0m
+       [31m  Unable to find field "beer[body]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:128:in `block (4 levels) in <main>'[0m
 
   105) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする 新規投稿フォームの内容が正しい
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[body]" that is not disabled[0m
+       [31m  Unable to find field "beer[body]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:128:in `block (4 levels) in <main>'[0m
 
   106) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの新規投稿失敗: 投稿一覧画面から行い、titleを空にする バリデーションエラーが表示される
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[body][1;31m'[0m[31m[0m, [35mwith[0m: @body[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[body]" that is not disabled[0m
+       [31m  Unable to find field "beer[body]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:128:in `block (4 levels) in <main>'[0m
 
   107) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿が更新されない
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[title]" that is not disabled[0m
+       [31m  Unable to find field "beer[title]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:158:in `block (4 levels) in <main>'[0m
 
   108) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[title]" that is not disabled[0m
+       [31m  Unable to find field "beer[title]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:158:in `block (4 levels) in <main>'[0m
 
   109) [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される
-       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbook[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
+       [31mFailure/Error: [0mfill_in [31m[1;31m'[0m[31mbeer[title][1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m[0m
        [31m[0m
        [31mCapybara::ElementNotFound:[0m
-       [31m  Unable to find field "book[title]" that is not disabled[0m
+       [31m  Unable to find field "beer[title]" that is not disabled[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:158:in `block (4 levels) in <main>'[0m
 
   110) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 URLが正しい
-       [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books/[1;31m'[0m[31m[0m + other_book.id.to_s[0m
+       [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/beers/[1;31m'[0m[31m[0m + other_beer.id.to_s[0m
        [31m[0m
-       [31m  expected: "/books/2"[0m
+       [31m  expected: "/beers/2"[0m
        [31m       got: "/users/sign_in"[0m
        [31m[0m
        [31m  (compared using ==)[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:220:in `block (5 levels) in <main>'[0m
 
-  111) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBook detail[1;31m'[0m[31m[0m[0m
-       [31m  expected to find text "Book detail" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+  111) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Beer detail」と表示される
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content [31m[1;31m'[0m[31mBeer detail[1;31m'[0m[31m[0m[0m
+       [31m  expected to find text "Beer detail" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:223:in `block (5 levels) in <main>'[0m
 
   112) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_book.user.name, [35mhref[0m: user_path(other_book.user)[0m
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_beer.user.name, [35mhref[0m: user_path(other_beer.user)[0m
        [31m  expected to find link "0fdwj7wec6" with href "/users/2" but there were no matches[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:226:in `block (5 levels) in <main>'[0m
 
   113) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.title[0m
-       [31m  expected to find text "ssvvq" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_beer.title[0m
+       [31m  expected to find text "ssvvq" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:229:in `block (5 levels) in <main>'[0m
 
   114) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.body[0m
-       [31m  expected to find text "8etlxrst0s81wc2h3u3l" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_beer.body[0m
+       [31m  expected to find text "8etlxrst0s81wc2h3u3l" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:232:in `block (5 levels) in <main>'[0m
 
   115) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
        [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_user.name[0m
-       [31m  expected to find text "585cjtn84y" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+       [31m  expected to find text "585cjtn84y" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:244:in `block (5 levels) in <main>'[0m
 
   116) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
@@ -1036,10 +1036,10 @@ Failures:
        [36m# ./spec/system/03_finishing_touches_spec.rb:248:in `block (5 levels) in <main>'[0m
 
   117) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
-       [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/books[1;31m'[0m[31m[0m[0m
+       [31mFailure/Error: [0m[32mexpect[0m(current_path).to eq [31m[1;31m'[0m[31m/beers[1;31m'[0m[31m[0m[0m
        [31m[0m
-       [31m  expected: "/books"[0m
-       [31m       got: "/books/3/edit"[0m
+       [31m  expected: "/beers"[0m
+       [31m       got: "/beers/3/edit"[0m
        [31m[0m
        [31m  (compared using ==)[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:269:in `block (4 levels) in <main>'[0m
@@ -1059,18 +1059,18 @@ Failures:
        [36m# ./spec/system/03_finishing_touches_spec.rb:283:in `block (5 levels) in <main>'[0m
 
   120) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のtitleが表示され、リンクが正しい
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_book.title, [35mhref[0m: book_path(other_book)[0m
-       [31m  expected to find link "idd6t" with href "/books/2" but there were no matches[0m
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_beer.title, [35mhref[0m: beer_path(other_beer)[0m
+       [31m  expected to find link "idd6t" with href "/beers/2" but there were no matches[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:286:in `block (5 levels) in <main>'[0m
 
   121) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧に他人の投稿のopinionが表示される
-       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_book.body[0m
-       [31m  expected to find text "j3j5q72wsel09swba4kz" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+       [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_beer.body[0m
+       [31m  expected to find text "j3j5q72wsel09swba4kz" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:289:in `block (5 levels) in <main>'[0m
 
   122) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
        [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_user.name[0m
-       [31m  expected to find text "78snj07dcp" in "Bookers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
+       [31m  expected to find text "78snj07dcp" in "Beerers\nHome About Sign up Log in\nLog in\nName\nPassword\nRemember me\nSign up Forgot your password?"[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:299:in `block (5 levels) in <main>'[0m
 
   123) [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
@@ -1108,8 +1108,8 @@ Failures:
        [36m# ./spec/system/03_finishing_touches_spec.rb:350:in `block (3 levels) in <main>'[0m
 
   129) [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される
-       [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.fa-solid.fa-book, .fas.fa-book[1;31m'[0m[31m[0m[0m
-       [31m  expected to find css ".fa-solid.fa-book, .fas.fa-book" but there were no matches[0m
+       [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.fa-solid.fa-beer, .fas.fa-beer[1;31m'[0m[31m[0m[0m
+       [31m  expected to find css ".fa-solid.fa-beer, .fas.fa-beer" but there were no matches[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:364:in `block (4 levels) in <main>'[0m
 
   130) [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される
@@ -1149,9 +1149,9 @@ Failures:
        [31m  expected to find css ".fa-solid.fa-users, .fas.fa-users" but there were no matches[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:415:in `block (4 levels) in <main>'[0m
 
-  137) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Booksリンクのアイコンが表示される
-       [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.fa-solid.fa-book-open, .fas.fa-book-open[1;31m'[0m[31m[0m[0m
-       [31m  expected to find css ".fa-solid.fa-book-open, .fas.fa-book-open" but there were no matches[0m
+  137) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Beersリンクのアイコンが表示される
+       [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.fa-solid.fa-beer-open, .fas.fa-beer-open[1;31m'[0m[31m[0m[0m
+       [31m  expected to find css ".fa-solid.fa-beer-open, .fas.fa-beer-open" but there were no matches[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:418:in `block (4 levels) in <main>'[0m
 
   138) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Log outリンクのアイコンが表示される
@@ -1194,29 +1194,29 @@ Failed examples:
 [31mrspec ./spec/system/01_before_login_spec.rb:150[0m [36m# [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:192[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログイン ログイン成功のテスト ログイン後のリダイレクト先が、ログインしたユーザの詳細画面になっている[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:229[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Usersリンクが表示される: 左上から3番目のリンクが「Users」である[0m
-[31mrspec ./spec/system/01_before_login_spec.rb:233[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Booksリンクが表示される: 左上から4番目のリンクが「Books」である[0m
+[31mrspec ./spec/system/01_before_login_spec.rb:233[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Beersリンクが表示される: 左上から4番目のリンクが「Beers」である[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:237[0m [36m# [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしている場合 ヘッダーの表示を確認 Log outリンクが表示される: 左上から5番目のリンクが「Log out」である[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:258[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト 正しくログアウトできている: ログアウト後のリダイレクト先においてAbout画面へのリンクが存在する[0m
 [31mrspec ./spec/system/01_before_login_spec.rb:261[0m [36m# [STEP1] ユーザログイン前のテスト ユーザログアウトのテスト ログアウト機能のテスト ログアウト後のリダイレクト先が、トップになっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:20[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Homeを押すと、自分のユーザ詳細画面に遷移する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:26[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Usersを押すと、ユーザ一覧画面に遷移する[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:32[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Booksを押すと、投稿一覧画面に遷移する[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:32[0m [36m# [STEP2] ユーザログイン後のテスト ヘッダーのテスト: ログインしている場合 リンクの内容を確認: ※logoutは『ユーザログアウトのテスト』でテスト済みになります。 Beersを押すと、投稿一覧画面に遷移する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:47[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 URLが正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:50[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分と他人の画像のリンク先が正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:54[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のタイトルのリンク先がそれぞれ正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:58[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 表示内容の確認 自分の投稿と他人の投稿のオピニオンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:65[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:69[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:72[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New book」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:72[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 「New beer」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:75[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:78[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:81[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:84[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:87[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:87[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト サイドバーの確認 Create Beerボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:98[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:101[0m [36m# [STEP2] ユーザログイン後のテスト 投稿一覧画面のテスト 投稿成功のテスト リダイレクト先が、保存できた投稿の詳細画面になっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:114[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 URLが正しい[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:117[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:117[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Beer detail」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:120[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:123[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:126[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のbodyが表示される[0m
@@ -1224,22 +1224,22 @@ Failed examples:
 [31mrspec ./spec/system/02_after_login_spec.rb:132[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿の削除リンクが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:138[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:142[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:145[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New book」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:145[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 「New beer」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:148[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:151[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:154[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:157[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:160[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:160[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 Create Beerボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:171[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:180[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 編集リンクのテスト 編集画面に遷移する[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:189[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト application.html.erbにjavascript_pack_tagを含んでいる[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:203[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト 正しく削除される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:206[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 削除リンクのテスト リダイレクト先が、投稿一覧画面になっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:218[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 URLが正しい[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:221[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Book」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:221[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 「Editing Beer」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:224[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 title編集フォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:227[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 body編集フォームが表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:230[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Bookボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:230[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Update Beerボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:233[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:236[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Backリンクが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:250[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される[0m
@@ -1251,24 +1251,24 @@ Failed examples:
 [31mrspec ./spec/system/02_after_login_spec.rb:279[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:286[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:290[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:293[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New book」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:293[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 「New beer」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:296[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:299[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 titleフォームに値が入っていない[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:302[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:305[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 bodyフォームに値が入っていない[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:308[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:308[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト サイドバーの確認 Create Beerボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:320[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 URLが正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:323[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:326[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のtitleが表示され、リンクが正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:329[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト 表示の確認 投稿一覧に自分の投稿のbodyが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:340[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:344[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクが存在する[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:347[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New book」と表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:347[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 「New beer」と表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:350[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:353[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 titleフォームに値が入っていない[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:356[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:359[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:362[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/02_after_login_spec.rb:362[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ詳細画面のテスト サイドバーの確認 Create Beerボタンが表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:374[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 URLが正しい[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:377[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 名前編集フォームに自分の名前が表示される[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:380[0m [36m# [STEP2] ユーザログイン後のテスト 自分のユーザ情報編集画面のテスト 表示の確認 画像編集フォームが表示される[0m
@@ -1294,7 +1294,7 @@ Failed examples:
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:165[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする 投稿編集画面を表示しており、フォームの内容が正しい[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:170[0m [36m# [STEP3] 仕上げのテスト 処理失敗時のテスト 投稿データの更新失敗: titleを空にする エラーメッセージが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:219[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 URLが正しい[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:222[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
+[31mrspec ./spec/system/03_finishing_touches_spec.rb:222[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Beer detail」と表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:225[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:228[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:231[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のopinionが表示される[0m
@@ -1320,7 +1320,7 @@ Failed examples:
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:396[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Log inリンクのアイコンが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:411[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Homeリンクのアイコンが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:414[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Usersリンクのアイコンが表示される[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:417[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Booksリンクのアイコンが表示される[0m
+[31mrspec ./spec/system/03_finishing_touches_spec.rb:417[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Beersリンクのアイコンが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:420[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしている場合 Log outリンクのアイコンが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:435[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ一覧画面でレンチアイコンが表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:439[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト サイドバー ユーザ詳細画面でレンチアイコンが表示される[0m

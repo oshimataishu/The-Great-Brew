@@ -2,12 +2,12 @@ class UsersController < ApplicationController
   before_action :is_matching_user, only: [:edit, :update]
   def show
     @user = User.find(params[:id])
-    @new_book = Book.new
+    @new_beer = Beer.new
   end
 
   def index
     @users = User.all
-    @new_book = Book.new
+    @new_beer = Beer.new
   end
 
   def edit
