@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_02_20_130214) do
+ActiveRecord::Schema.define(version: 2024_04_17_142341) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,27 +40,79 @@ ActiveRecord::Schema.define(version: 2024_02_20_130214) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
   create_table "beer_comments", force: :cascade do |t|
     t.text "comment"
     t.integer "user_id"
     t.integer "beer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["beer_id"], name: "index_beer_comments_on_beer_id"
+    t.index ["user_id"], name: "index_beer_comments_on_user_id"
   end
 
-  create_table "beers", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "favorites", force: :cascade do |t|
+  create_table "beer_favorites", force: :cascade do |t|
     t.integer "beer_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["beer_id"], name: "index_beer_favorites_on_beer_id"
+    t.index ["user_id"], name: "index_beer_favorites_on_user_id"
+  end
+
+  create_table "beers", force: :cascade do |t|
+    t.string "name"
+    t.text "feature"
+    t.integer "price_level", null: false
+    t.integer "fruity", null: false
+    t.integer "sharpness", null: false
+    t.integer "bitter", null: false
+    t.integer "sour", null: false
+    t.integer "aftertaste", null: false
+    t.integer "price", null: false
+    t.integer "company_id"
+    t.integer "country_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_beers_on_company_id"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "introduction", null: false
+    t.string "phone_number", null: false
+    t.string "email", null: false
+    t.boolean "is_active", default: true, null: false
+    t.integer "country_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["country_id"], name: "index_companies_on_country_id"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favorite_companies", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_favorite_companies_on_company_id"
+    t.index ["user_id"], name: "index_favorite_companies_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -76,8 +128,17 @@ ActiveRecord::Schema.define(version: 2024_02_20_130214) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name"
-    t.text "introduction"
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name_kana", null: false
+    t.string "first_name_kana", null: false
+    t.string "postal_code", null: false
+    t.string "address", null: false
+    t.string "phone_number", null: false
+    t.boolean "is_active", default: true, null: false
+    t.integer "prefecture_code", null: false
+    t.float "latitude", null: false
+    t.float "longtitude", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -86,4 +147,12 @@ ActiveRecord::Schema.define(version: 2024_02_20_130214) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "beer_comments", "beers"
+  add_foreign_key "beer_comments", "users"
+  add_foreign_key "beer_favorites", "beers"
+  add_foreign_key "beer_favorites", "users"
+  add_foreign_key "beers", "companies"
+  add_foreign_key "companies", "countries"
+  add_foreign_key "favorite_companies", "companies"
+  add_foreign_key "favorite_companies", "users"
 end

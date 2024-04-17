@@ -1,11 +1,13 @@
 class Beer < ApplicationRecord
   has_one_attached :image
   belongs_to :user
-  has_many :favorites, dependent: :destroy
+  belongs_to :company
+  belongs_to :country
+  has_many :beer_favorites, dependent: :destroy
   has_many :beer_comments, dependent: :destroy
 
-  validates :title, presence: true
-  validates :body, presence: true, length: {maximum: 200}
+  validates :name, presence: true
+  validates :feature, presence: true, length: {maximum: 200}
 
   def get_image
     unless image.attached?
