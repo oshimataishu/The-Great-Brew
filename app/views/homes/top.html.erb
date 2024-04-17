@@ -100,6 +100,9 @@
         <div class="row mt-5 justify-content-center">
           <%= link_to "会員登録はこちら", new_user_registration_path, class:"btn btn-outline-dark btn-lg mb-5"%>
         </div>
+        <div class="row mt-1 justify-content-center">
+          <%= link_to "ゲストログインはこちら", users_guest_sign_in_path, method: :post, class:"btn btn-outline-dark btn-lg mb-5"%>
+        </div>
       </div>
       <div class="col-lg-4 py-5">
         <%= image_tag 'pouring.jpg', class:"img-fluid rounded-circle" %>

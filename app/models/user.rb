@@ -30,6 +30,18 @@ class User < ApplicationRecord
     profile_image.variant(resize_to_limit: [width, height]).processed
   end
 
+  GUEST_EMAIL = 'guest@example.com'
+  GUEST_NAME = 'ゲスト'
+  GUEST_INTRO = "ゲストアカウントです"
+
+  def self.find_or_create_guest
+    User.find_or_create_by!(email: GUEST_EMAIL) do |user|
+      user.name = GUEST_NAME
+      user.introduction = GUEST_INTRO
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
   def following?(user)
     if active_relationships.exists?(followed_id: user.id)
       return true

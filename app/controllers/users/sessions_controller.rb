@@ -18,15 +18,21 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  def guest_sign_in
+    user = User.find_or_create_guest
+    sign_in user
+    redirect_to user_path(current_user)
+  end
+
   protected
 
   def after_sign_out_path_for(resource)
-    root_path, flash: {danger: "ログアウトしました"}
+    root_path, flash[:danger] = "ログアウトしました"
   end
 
 
   def after_sign_in_path_for(resource)
-    beers_path, flash: {success: "ログインしました"}
+    beers_path, flash[:success] = "ログインしました"
   end
 
   # If you have extra params to permit, append them to the sanitizer.
