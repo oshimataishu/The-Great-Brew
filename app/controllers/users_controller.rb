@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :is_matching_user, only: [:edit, :update]
+  before_action :authenticate_user, only: [:edit, :update]
   def show
     @user = User.find(params[:id])
     @new_beer = Beer.new
@@ -26,9 +26,9 @@ class UsersController < ApplicationController
 
   private
 
-  def is_matching_user
+  def authenticate_user
     @user = User.find(params[:id])
-    unless @user == current_user
+    unless @user == current_user && current_user.email != "guest@example.com"
       redirect_to user_path(current_user)
     end
   end
