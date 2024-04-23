@@ -16,3 +16,14 @@ import "../stylesheet/application";
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$(document).on("turbolinks:load", function() {
+  $('#user_postal_code').jpostal({
+    postal_code : [
+      '#user_postal_code'
+    ],
+    address: {
+      '#user_address' : '%3',
+    }
+  });
+})

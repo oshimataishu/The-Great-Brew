@@ -70,3 +70,15 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 gem 'kaminari'
+
+# デモレコード生成用
+gem 'faker'
+# 日本人の名前生成gem
+gem 'gimei'
+
+# 住所入力機能gem
+gem 'jp_prefecture'
+
+gem 'dotenv-rails'
+
+gem 'geocoder'
