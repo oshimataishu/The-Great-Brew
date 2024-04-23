@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="row">
+        <h2 class="my-4">Users</h2>
+      <%# </div> %>
+      <%# <div class="row justify-content-end">
+        <%= link_to "グループを作る", new_group_path, class:"btn btn-success" %>
+        <%# <%= link_to "グループ一覧", groups_path, class:"btn btn-info" %>
+      <%# </div> %>
+      <div class="row">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Tags</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                <%= link_to admin_user_path(user) do %>
+                  <%= image_tag user.get_profile_image(50,50), class:"card-img-top" %>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to user.last_name, admin_user_path(user) %><br>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

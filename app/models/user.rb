@@ -17,11 +17,12 @@ class User < ApplicationRecord
   has_many :followings, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
-  validates :name, presence: true,
-                   length: {minimum: 2, maximum: 20},
-                   uniqueness: true
-  validates :introduction, length: {maximum: 50}
 
+  geocoded_by :address
+  after_validation :geocode
+
+  include JpPrefecture
+  jp_prefecture :prefecture_code
 
   def get_profile_image(width, height)
     unless profile_image.attached?
@@ -33,12 +34,10 @@ class User < ApplicationRecord
 
   GUEST_EMAIL = 'guest@example.com'
   GUEST_NAME = 'ゲスト'
-  GUEST_INTRO = "ゲストアカウントです"
 
   def self.find_or_create_guest
     User.find_or_create_by!(email: GUEST_EMAIL) do |user|
       user.name = GUEST_NAME
-      user.introduction = GUEST_INTRO
       user.password = SecureRandom.urlsafe_base64
     end
   end
@@ -76,4 +75,13 @@ class User < ApplicationRecord
       @user = User.all
     end
   end
+
+  def prefecture_name
+    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+  end
+
+  def prefecture_name=(prefecture_name)
+    self.prefecture_code = JpPrefecture::Prefeture.find(name: prefecture_name).code
+  end
+
 end

@@ -26,15 +26,15 @@
             <span>LOG OUT</span>
           <% end %>
         <% elsif admin_signed_in? %>
-          <%= link_to user_path(current_admin), class:"nav-link" do %>
+          <%= link_to admin_root_path, class:"nav-link" do %>
             <i class="bi bi-house-door"></i><br>
             <span>HOME</span>
           <% end %>
-          <%= link_to users_path, class:"nav-link" do %>
+          <%= link_to admin_users_path, class:"nav-link" do %>
             <i class="bi bi-people"></i><br>
             <span>USERS</span>
           <% end %>
-          <%= link_to beers_path, class:"nav-link" do %>
+          <%= link_to admin_beers_path, class:"nav-link" do %>
             <i class="fas fa-beer"></i><br>
             <span>BEERS</span>
           <% end %>

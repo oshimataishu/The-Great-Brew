@@ -133,12 +133,12 @@ ActiveRecord::Schema.define(version: 2024_04_17_142341) do
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
     t.string "postal_code", null: false
-    t.string "address", null: false
+    t.string "address"
     t.string "phone_number", null: false
     t.boolean "is_active", default: true, null: false
-    t.integer "prefecture_code", null: false
-    t.float "latitude", null: false
-    t.float "longtitude", null: false
+    t.integer "prefecture_code"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

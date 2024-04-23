@@ -51,7 +51,7 @@ class Public::RegistrationsController < Devise::RegistrationsController
   # end
 
   def after_sign_up_path_for(resource)
-    beers_path, flash: {success: "新規登録が完了しました"}
+    beers_path, flash[:success] = "新規登録が完了しました"
   end
 
   # The path used after sign up for inactive accounts.

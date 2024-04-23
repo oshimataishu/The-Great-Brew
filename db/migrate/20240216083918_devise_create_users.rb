@@ -37,12 +37,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :last_name_kana, null: false
       t.string :first_name_kana, null: false
       t.string :postal_code, null: false
-      t.string :address, null: false
+      t.string :address
       t.string :phone_number, null: false
       t.boolean :is_active, null: false, default: true
-      t.integer :prefecture_code, null: false
-      t.float :latitude, null: false
-      t.float :longtitude, null: false
+      t.integer :prefecture_code
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps null: false
     end

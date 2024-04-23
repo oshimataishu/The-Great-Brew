@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'homes#top'
     get 'homes/about'
-    resources :beers, only: %i[index, create, edit, show, update, destroy]
-    resources :users, only: %i[show, index, update, edit]
+    resources :beers, only: [:index, :create, :edit, :show, :update, :destroy]
+    resources :users, only: [:show, :index, :update, :edit]
   end
 
   resources :users, only: [:show, :index, :edit, :update] do
